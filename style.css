@@ -1,0 +1,531 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.96);
+    border-bottom:1px solid rgba(212,175,55,.35);
+    padding:16px 25px;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.header .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:26px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    color:#fff;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.book-btn,
+.hero-btn,
+.contact-btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#f0d36b,#b8860b);
+    color:#111;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.book-btn:hover,
+.hero-btn:hover,
+.contact-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(212,175,55,.3);
+}
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.78)),
+    url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1600');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-content h2{
+    color:#d4af37;
+    font-size:28px;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+.hero-content h1{
+    font-size:58px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#ddd;
+    margin:10px auto;
+    max-width:750px;
+}
+
+.hero-btn{
+    margin-top:25px;
+}
+
+.about,
+.services,
+.gallery,
+.contact,
+.why-us{
+    padding:85px 20px;
+}
+
+.about{
+    background:#111;
+    text-align:center;
+}
+
+.about h2,
+.services h2,
+.gallery h2,
+.contact h2,
+.why-us h2{
+    color:#d4af37;
+    font-size:36px;
+    margin-bottom:25px;
+}
+
+.about p{
+    max-width:850px;
+    margin:12px auto;
+    color:#ccc;
+}
+
+.services{
+    background:#f4f4f4;
+    color:#222;
+    text-align:center;
+}
+
+.services h2{
+    color:#111;
+}
+
+.service-grid,
+.why-grid,
+.gallery-grid{
+    width:92%;
+    max-width:1100px;
+    margin:35px auto 0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+}
+
+.service-card{
+    background:#fff;
+    padding:30px 20px;
+    border-radius:15px;
+    border-top:4px solid #d4af37;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+}
+
+.service-card h3{
+    color:#222;
+}
+
+.why-us{
+    background:#0b0b0b;
+    text-align:center;
+}
+
+.why-card{
+    background:#151515;
+    border:1px solid rgba(212,175,55,.45);
+    padding:30px 20px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+}
+
+.why-card h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:#ccc;
+}
+
+.gallery{
+    background:#f4f4f4;
+    color:#222;
+    text-align:center;
+}
+
+.gallery h2{
+    color:#111;
+}
+
+.gallery p{
+    color:#555;
+}
+
+.gallery-box{
+    height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#151515;
+    color:#d4af37;
+    border-radius:15px;
+    border:1px solid #d4af37;
+    font-size:20px;
+    font-weight:700;
+}
+
+.contact{
+    background:#111;
+    text-align:center;
+}
+
+.contact p{
+    color:#ddd;
+    margin:10px;
+}
+
+.contact-btn{
+    margin-top:20px;
+    background:#25d366;
+    color:#fff;
+}
+
+.footer{
+    background:#000;
+    color:#aaa;
+    text-align:center;
+    padding:45px 20px;
+    border-top:1px solid rgba(212,175,55,.3);
+}
+
+.footer h3{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin:7px 0;
+}
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25d366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+    z-index:2000;
+}
+
+@media(max-width:800px){
+
+    .header{
+        padding:14px 15px;
+    }
+
+    .header .container{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .logo{
+        font-size:22px;
+        text-align:center;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px 14px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .book-btn{
+        padding:9px 18px;
+        font-size:14px;
+    }
+
+    .hero{
+        min-height:80vh;
+        padding:60px 18px;
+    }
+
+    .hero-content h2{
+        font-size:19px;
+        letter-spacing:2px;
+    }
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .about,
+    .services,
+    .gallery,
+    .contact,
+    .why-us{
+        padding:65px 18px;
+    }
+
+    .service-grid,
+    .why-grid,
+    .gallery-grid{
+        width:100%;
+        grid-template-columns:1fr;
+    }
+}
+
+    .header .container{
+        flex-direction:column;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .hero{
+        min-heigh.section-intro{
+    max-width:700px;
+    margin:0 auto 35px;
+    color:#666;
+}t:80vh;
+    }
+
+    .hero-content h2{
+        font-size:20px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .about h2,
+    .services h2,
+    .gallery h2,
+    .contact h2,
+    .why-us h2{
+        font-size:29px;
+    }
+}
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:22px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .book-btn{
+        padding:10px 18px;
+    }
+
+    .service-grid,
+    .why-grid,
+    .gallery-grid{
+        width:100%;
+        grid-template-columns:1fr;
+    }
+}
+.booking-form{
+    max-width:650px;
+    margin:35px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #333;
+    border-radius:10px;
+    background:#181818;
+    color:#fff;
+    font-size:16px;
+    outline:none;
+}
+
+.booking-form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+    border-color:#d4af37;
+}
+
+.booking-form button{
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+.gallery-item{
+    position:relative;
+    height:220px;
+    overflow:hidden;
+    border-radius:15px;
+    border:1px solid #d4af37;
+    background:#151515;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:15px;
+    background:rgba(0,0,0,.75);
+    color:#d4af37;
+    font-weight:bold;
+}
+.tagline{
+    color:#d4af37;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin:18px 0;
+}
+.hero-content h2{
+    color:#d4af37;
+    font-size:48px;
+    letter-spacing:4px;
+    margin-bottom:12px;
+}
+
+.hero-content h1{
+    font-size:28px;
+    font-weight:400;
+    color:#fff;
+    margin-bottom:15px;
+}
+.hero-content h2{
+    font-size:34px;
+}
+
+.hero-content h1{
+    font-size:21px;
+}
+.hero-content .tagline{
+    color:#d4af37 !important;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin:18px 0;
+}
+@media(max-width:800px){
+    .hero-content .tagline{
+        color:#d4af37 !important;
+        font-size:21px;
+    }
+}
